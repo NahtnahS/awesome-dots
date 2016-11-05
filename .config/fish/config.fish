@@ -8,3 +8,6 @@ set fish_greeting "Hey, do you see something fishy?"
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 
+# Golang settings
+set -x GOPATH $HOME/workspace/golang
+set -gx PATH $PATH $GOPATH/bin
