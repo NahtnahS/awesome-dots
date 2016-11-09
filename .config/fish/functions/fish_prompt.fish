@@ -56,6 +56,14 @@ function fish_prompt
     else
         echo -n '╰─>'
     end
+    if [ $VIRTUAL_ENV ]
+        set_color -o green
+        echo -n '('
+        set_color -o white
+        echo -n (basename $VIRTUAL_ENV)
+        set_color -o green
+        echo -n ')'
+    end
     set_color -o red
     echo -n '$ '
     set_color normal

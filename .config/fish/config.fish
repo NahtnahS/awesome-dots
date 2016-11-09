@@ -11,3 +11,6 @@ set -x LANG en_US.UTF-8
 # Golang settings
 set -x GOPATH $HOME/workspace/golang
 set -gx PATH $PATH $GOPATH/bin
+
+# Virtualenv disable prompt
+set -x VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
