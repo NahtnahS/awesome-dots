@@ -20,32 +20,42 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-BAT_N=0
+for i in `seq 0 1`; do
+	BAT_N=$i
 
-OUT=$(acpi -b | grep "Battery $BAT_N")
-
-BAT_S=$(echo $OUT | awk '{ print $3 }' | grep -o '[a-zA-Z]*')
-BAT_P=$(echo $OUT | awk '{ print $4 }' | grep -o '[0-9]*')
-BAT_R=$(echo $OUT | awk '{ print $5 }' | cut -d ':' -f 1,2)
-
-if [[ $BAT_S == "Discharging" ]]; then
-	if [[ $BAT_P -ge 80 ]]; then
-		printf "<span color='#005900'>"
-	elif [[ $BAT_P -ge 60 ]]; then
-		printf "<span color='#A8FF00'>"
-	elif [[ $BAT_P -ge 40 ]]; then
-		printf "<span color='#FFF600'>"
-	elif [[ $BAT_P -ge 20 ]]; then
-		printf "<span color='#FFAE00'>"
-	else
-		printf "<span color='#FF0000'>"
+	if [[ $i -ge 1 ]]; then
+		printf " -  "  # Two space after because it is follwed by unicode
 	fi
-else
-	printf "<span color='#005900'>"
-fi
 
-printf "  $BAT_P%% ($BAT_R)"
-printf "</span>"
+	OUT=$(acpi -b | grep "Battery $BAT_N")
+
+	BAT_S=$(echo $OUT | awk '{ print $3 }' | grep -o '[a-zA-Z]*')
+	BAT_P=$(echo $OUT | awk '{ print $4 }' | grep -o '[0-9]*')
+	BAT_R=$(echo $OUT | awk '{ print $5 }' | cut -d ':' -f 1,2)
+
+	if [[ $BAT_S == "Charging" ]]; then
+		printf "<span color='#005900'>"
+	else
+		if [[ $BAT_P -ge 80 ]]; then
+			printf "<span color='#005900'>"
+		elif [[ $BAT_P -ge 60 ]]; then
+			printf "<span color='#A8FF00'>"
+		elif [[ $BAT_P -ge 40 ]]; then
+			printf "<span color='#FFF600'>"
+		elif [[ $BAT_P -ge 20 ]]; then
+			printf "<span color='#FFAE00'>"
+		else
+			printf "<span color='#FF0000'>"
+		fi
+	fi
+
+
+	printf "  $BAT_P%% "
+	if [[ $BAT_R ]]; then
+		printf "($BAT_R)"
+	fi
+	printf "</span>"
+done
 
 if [[ $BAT_P -lt 5 ]]; then
 	exit 33
