@@ -22,3 +22,8 @@ cp ~/.xinitrc .
 
 # Mplayer
 cp -r ~/.mplayer .
+
+# bspwm
+cp -r ~/.config/bspwm .config/.
+cp -r ~/.config/sxhkd .config/.
+cp -r ~/.config/yabar .config/.

@@ -98,6 +98,10 @@ nnoremap <C-H> <C-W><C-H>
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:ultisnips_python_style='sphinx'
 
 "" Gui Fonts
 "set guifont=Font\ Awesome\ 8
+
+" set exrc
+" set secure
