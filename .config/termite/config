@@ -1,0 +1,51 @@
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+search_wrap = true
+allow_bold = true
+urgent_on_bell = true
+clickable_url = true
+font = Hack 12
+scrollback_lines = 10000
+
+cursor_blink = system
+cursor_shape = block
+
+[colors]
+# special
+foreground      = #c8cec0
+foreground_bold = #c8cec0
+cursor          = #c8cec0
+background      = rgba(3e, 3e, 3e, 0.7)
+
+# black
+color0  = #171815
+color8  = #e5aa78
+
+# red
+color1  = #20211e
+color9  = #b284e4
+
+# green
+color2  = #30322e
+color10 = #e2ae85
+
+# yellow
+color3  = #484a44
+color11 = #c7894b
+
+# blue
+color4  = #656860
+color12 = #9fb76d
+
+# magenta
+color5  = #888b82
+color13 = #e7a56a
+
+# cyan
+color6  = #b0b5a9
+color14 = #4795b0
+
+# white
+color7  = #dfe5d5
+color15 = #5ab7d6

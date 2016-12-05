@@ -57,7 +57,7 @@ set laststatus=2                              " without this the status line is 
 set ttimeoutlen=50                            " to prevent delay when leaving insert mode
 let g:airline#extensions#tabline#enabled = 1  " it is disabled by default, so
 let g:airline_powerline_fonts=1               " using patched Inconsolata
-let g:airline_theme='powerlineish'            " favourite theme
+let g:airline_theme='luna'            " favourite theme
 let g:rehash256=1
 
 " Colorscheme
@@ -98,10 +98,6 @@ nnoremap <C-H> <C-W><C-H>
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:ultisnips_python_style='sphinx'
 
 "" Gui Fonts
 "set guifont=Font\ Awesome\ 8
-
-" set exrc
-" set secure

@@ -27,3 +27,13 @@ cp -r ~/.mplayer .
 cp -r ~/.config/bspwm .config/.
 cp -r ~/.config/sxhkd .config/.
 cp -r ~/.config/yabar .config/.
+
+# gtk
+cp -r ~/.config/gtk-2.0 .config/.
+cp -r ~/.config/gtk-3.0 .config/.
+
+# rtv
+cp -r ~/.config/rtv/rtv.cfg .config/rtv/rtv.cfg
+
+# termite
+cp -r ~/.config/termite/config .config/termite/config

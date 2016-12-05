@@ -35,18 +35,24 @@ for i in `seq 0 $(expr $BAT_N - 1)`; do
 	BAT_R=$(echo $OUT | awk '{ print $5 }' | cut -d ':' -f 1,2)
 
 	if [[ $BAT_S == "Charging" ]]; then
-		printf "<span color='#005900'>"
+		# printf "<span color='#005900'>"
+		printf ""
 	else
 		if [[ $BAT_P -ge 80 ]]; then
-			printf "<span color='#005900'>"
+			# printf "<span color='#005900'>"
+			printf ""
 		elif [[ $BAT_P -ge 60 ]]; then
-			printf "<span color='#A8FF00'>"
+			# printf "<span color='#A8FF00'>"
+			printf ""
 		elif [[ $BAT_P -ge 40 ]]; then
-			printf "<span color='#FFF600'>"
+			# printf "<span color='#FFF600'>"
+			printf ""
 		elif [[ $BAT_P -ge 20 ]]; then
-			printf "<span color='#FFAE00'>"
+			# printf "<span color='#FFAE00'>"
+			printf ""
 		else
-			printf "<span color='#FF0000'>"
+			# printf "<span color='#FF0000'>"
+			printf ""
 		fi
 	fi
 
@@ -55,7 +61,7 @@ for i in `seq 0 $(expr $BAT_N - 1)`; do
 	if [[ $BAT_R ]]; then
 		printf "($BAT_R)"
 	fi
-	printf "</span>"
+	# printf "</span>"
 done
 
 if [[ $BAT_P -lt 5 ]]; then

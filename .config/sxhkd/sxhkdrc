@@ -7,6 +7,10 @@ super + shift + q
 super + {_, shift + } {1-9, 0}
 	bspc {desktop -f, node -d} '^{1-9,10}'
 
+# Switch focus or current desktop to that monitor
+super + {_, shift + } {Left,Right,Up,Down}
+	bspc {monitor -f, desktop -m} '{west,east,north,south}'
+
 # Layouts
 super + {f,w,e}
 	bspc node -t {fullscreen,floating,tiled}
@@ -50,7 +54,7 @@ super + ctrl + space
 
 # Launch terminal emulator
 super + Return
-	terminator
+	termite -e /usr/bin/fish
 
 # Launcher
 super + d
@@ -67,6 +71,9 @@ XF86MonBrightness{Up,Down}
 XF86Audio{Raise,Lower}Volume
 	amixer sset Master {5%+,5%-}
 
+# Lock
+super + shift + e; {l,shift+s,r}
+	bash ~/.scripts/actions.sh {lock,shutdown,reboot}
 
 # Reload sxhkd
 super + shift + r
