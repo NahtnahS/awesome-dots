@@ -37,7 +37,7 @@ super + alt + shift + {h,j,k,l}
 super + {_,shift + }space
     insert={true,false}; \
     $insert && bspc node -i || \
-    for win in `bspc query -N -n .leaf.!window`; do bspc node $win -k ; done;
+    for win in `bspc query -m focused -N -n .leaf.!window`; do bspc node $win -k ; done;
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -71,6 +71,9 @@ XF86MonBrightness{Up,Down}
 XF86Audio{Raise,Lower}Volume
 	amixer sset Master {5%+,5%-}
 
+XF86AudioMute
+	amixer sset Master toggle
+
 # Lock
 super + shift + e; {l,shift+s,r}
 	bash ~/.scripts/actions.sh {lock,shutdown,reboot}
@@ -79,4 +82,5 @@ super + shift + e; {l,shift+s,r}
 super + shift + r
 	pkill -USR1 -x sxhkd
 
-
+super + shift + p
+	scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'

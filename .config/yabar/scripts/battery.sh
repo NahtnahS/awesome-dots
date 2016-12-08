@@ -25,7 +25,7 @@ for i in `seq 0 $(expr $BAT_N - 1)`; do
 	BAT_N=$i
 
 	if [[ $i -ge 1 ]]; then
-		printf " -  "  # Two space after because it is follwed by unicode
+		printf " "  # Two space after because it is follwed by unicode
 	fi
 
 	OUT=$(acpi -b | grep "Battery $BAT_N")
@@ -56,9 +56,8 @@ for i in `seq 0 $(expr $BAT_N - 1)`; do
 		fi
 	fi
 
-
-	printf "  $BAT_P%% "
 	if [[ $BAT_R ]]; then
+		printf "  $BAT_P%% "
 		printf "($BAT_R)"
 	fi
 	# printf "</span>"

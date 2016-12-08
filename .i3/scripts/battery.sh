@@ -19,9 +19,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-BAT_N=$(acpi -b | wc -l)
 
-for i in `seq 0 $(expr $BAT_N - 1)`; do
+for i in `seq 0 1`; do
 	BAT_N=$i
 
 	if [[ $i -ge 1 ]]; then
