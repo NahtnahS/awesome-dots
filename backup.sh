@@ -37,3 +37,6 @@ cp -r ~/.config/rtv/rtv.cfg .config/rtv/rtv.cfg
 
 # termite
 cp -r ~/.config/termite/config .config/termite/config
+
+# Scripts dir
+cp -r ~/.scripts .
