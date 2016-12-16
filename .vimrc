@@ -4,11 +4,21 @@ set number          " show line numbers
 set nofoldenable    " disable folding
 set nowrap
 set modelines=1
-set sidescroll=1    " horizontal scrolling by character
+set sidescroll=10    " horizontal scrolling by character
+set relativenumber             " relative numbering
 set shell=bash
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+" Display all matching files when we tab complete
+set wildmenu
+
+" ctags command
+command! MakeTags !ctags -R .
 
 " Vundle stuff
 " set the runtime path to include Vundle and initialize
@@ -21,7 +31,7 @@ Plugin 'gmarik/Vundle.vim'
 " Airline instead of powerline, simple yet great
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'majutsushi/tagbar'
+Plugin 'bling/vim-bufferline'
 
 " Completing engine
 Plugin 'Valloric/YouCompleteMe'
@@ -30,10 +40,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
-" Browsing files & fuzzy file search
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-
 " PEP-8 compliance help
 Plugin 'nvie/vim-flake8'
 " Plugin 'klen/python-mode'
@@ -41,9 +47,6 @@ Plugin 'nvie/vim-flake8'
 " DVCS : Git, gitgutter for showing the changes beside line numbers
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-
-" GOlang
-Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,7 +58,6 @@ set encoding=utf-8
 " Airline Hacks
 set laststatus=2                              " without this the status line is not visible
 set ttimeoutlen=50                            " to prevent delay when leaving insert mode
-let g:airline#extensions#tabline#enabled = 1  " it is disabled by default, so
 let g:airline_powerline_fonts=1               " using patched Inconsolata
 let g:airline_theme='luna'            " favourite theme
 let g:rehash256=1
@@ -98,6 +100,3 @@ nnoremap <C-H> <C-W><C-H>
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-"" Gui Fonts
-"set guifont=Font\ Awesome\ 8
