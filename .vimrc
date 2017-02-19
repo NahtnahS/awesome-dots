@@ -41,6 +41,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " PEP-8 compliance help
+Plugin 'w0rp/ale'
 Plugin 'nvie/vim-flake8'
 " Plugin 'klen/python-mode'
 
@@ -60,6 +61,7 @@ set laststatus=2                              " without this the status line is 
 set ttimeoutlen=50                            " to prevent delay when leaving insert mode
 let g:airline_powerline_fonts=1               " using patched Inconsolata
 let g:airline_theme='luna'            " favourite theme
+let g:airline#extensions#tabline#show_buffers=1
 let g:rehash256=1
 
 " Colorscheme
@@ -100,3 +102,16 @@ nnoremap <C-H> <C-W><C-H>
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:ultisnips_python_style="google"
+
+" Lint Engine
+let g:ale_sign_warning="⚠"
+let g:ale_sign_error="❌"
+let g:airline#extensions#ale#error_symbol="❌"
+let g:airline#extensions#ale#warning_symbol="⚠ "
+nmap <silent> [l <Plug>(ale_previous_wrap)
+nmap <silent> ]l <Plug>(ale_next_wrap)
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+let g:ale_lint_on_save=1  " Run lint only on save
+let g:ale_lint_on_text_changed=0

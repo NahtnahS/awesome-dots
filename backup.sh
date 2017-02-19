@@ -1,6 +1,7 @@
 # Vim backup
 cp ~/.vimrc .
 cp -r ~/.vim/colors/* .vim/colors/.
+cp ~/.config/flake8 .config/.
 
 # .config backup
 cp ~/.config/compton.conf .config/.
