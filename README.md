@@ -4,25 +4,17 @@ AWESOME-DOTS
 A collection of all my config files so that I dont end up writing them all over
 again :P
 
-* Window Manager - i3
-* Editor         - Vim
-* Terminal       - terminator
+* Window Manager - bspwm
+* Editor         - vim
+* Terminal       - termite
 * IRC Client     - weechat
-* GTK Theme      - Zukwito
-* Icon Theme     - Faenza
-* Cursor Theme   - Ecliz
-* Music Player   - MPD
-* Video Player   - Mplayer
+* GTK Theme      - zukwito
+* Icon Theme     - faenza
+* Cursor Theme   - ecliz
+* Music Player   - mpd/ncmpcpp
+* Video Player   - mpv
 
 SCREENSHOTS
 -----------
 
-Clean
-
-![Clean Desktop](screenshots/clean.png)
-
-Dirty
-
-![Dirty Desktop](screenshots/dirty1.png)
-
-![Dirty Desktop](screenshots/dirty2.png)
+![Multi Monitor Setup](screenshots/multi_monitor.jpg)
