@@ -106,8 +106,8 @@ let g:ultisnips_python_style="google"
 
 " Lint Engine
 let g:ale_sign_warning="⚠"
-let g:ale_sign_error="❌"
-let g:airline#extensions#ale#error_symbol="❌"
+let g:ale_sign_error="x"
+let g:airline#extensions#ale#error_symbol="x"
 let g:airline#extensions#ale#warning_symbol="⚠ "
 nmap <silent> [l <Plug>(ale_previous_wrap)
 nmap <silent> ]l <Plug>(ale_next_wrap)
