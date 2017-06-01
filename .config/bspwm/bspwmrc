@@ -1,9 +1,9 @@
 #! /usr/bin/bash
 
 sxhkd &
-yabar &
 compton -b
 feh --bg-fill ~/Pictures/wallpaper.jpg
+yabar &
 
 bspc config border_width        1
 bspc config window_gap          15
