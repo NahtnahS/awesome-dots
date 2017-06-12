@@ -5,49 +5,48 @@ search_wrap = true
 allow_bold = true
 urgent_on_bell = true
 clickable_url = true
-font = Hack 13
+font = Fira Mono for Powerline 13
 scrollback_lines = 10000
 
 cursor_blink = system
 cursor_shape = block
 
 [colors]
+# hard contrast: background = #1d2021
+# background = #282828
+background = #1d2021
+# soft contrast: background = #32302f
+foreground = #ebdbb2
+foreground_bold = #ebdbb2
 
-# special
-foreground      = #98d1ce
-foreground_bold = #98d1ce
-cursor          = #98d1ce
-background      = #0a0f14
+# dark0 + gray
+color0 = #282828
+color8 = #928374
 
-# black
-color0  = #0a0f14
-color8  = #10151b
+# neutral_red + bright_red
+color1 = #cc241d
+color9 = #fb4934
 
-# red
-color1  = #c33027
-color9  = #d26939
+# neutral_green + bright_green
+color2 = #98971a
+color10 = #b8bb26
 
-# green
-color2  = #26a98b
-color10 = #081f2d
+# neutral_yellow + bright_yellow
+color3 = #d79921
+color11 = #fabd2f
 
-# yellow
-color3  = #edb54b
-color11 = #245361
+# neutral_blue + bright_blue
+color4 = #458588
+color12 = #83a598
 
-# blue
-color4  = #195465
-color12 = #093748
+# neutral_purple + bright_purple
+color5 = #b16286
+color13 = #d3869b
 
-# magenta
-color5  = #4e5165
-color13 = #888ba5
+# neutral_aqua + faded_aqua
+color6 = #689d6a
+color14 = #8ec07c
 
-# cyan
-color6  = #33859d
-color14 = #599caa
-
-# white
-color7  = #98d1ce
-color15 = #d3ebe9
-
+# light4 + light1
+color7 = #a89984
+color15 = #ebdbb2

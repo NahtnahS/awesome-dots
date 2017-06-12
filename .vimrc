@@ -60,18 +60,13 @@ set encoding=utf-8
 set laststatus=2                              " without this the status line is not visible
 set ttimeoutlen=50                            " to prevent delay when leaving insert mode
 let g:airline_powerline_fonts=1               " using patched Inconsolata
-let g:airline_theme='luna'            " favourite theme
+let g:airline_theme='gruvbox'            " favourite theme
 let g:airline#extensions#tabline#show_buffers=1
 let g:rehash256=1
 
 " Colorscheme
-let g:molokai_original=1
-colorscheme molokai
-hi Normal ctermbg=None
-hi LineNr ctermbg=None
-
-" OSX hacks
-set backspace=start,eol,indent
+colorscheme gruvbox
+set background=dark
 
 " Search customisations
 set hlsearch incsearch ignorecase " highlight search, incremental search and ignore case
