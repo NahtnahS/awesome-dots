@@ -1,6 +1,3 @@
-# Update the PATH to ensure Homebrew packages are used.
-set -gx PATH /usr/local/bin /usr/local/sbin $PATH
-
 # Custom greeting
 set fish_greeting "Hey, do you see something fishy?"
 

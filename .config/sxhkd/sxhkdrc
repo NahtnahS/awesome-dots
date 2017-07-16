@@ -82,5 +82,5 @@ super + shift + e; {l,shift+s,r}
 super + shift + r
 	pkill -USR1 -x sxhkd
 
-super + shift + p
+Print
 	scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
