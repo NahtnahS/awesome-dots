@@ -1,5 +1,12 @@
 #! /usr/bin/bash
 
+# Workaround for: https://github.com/baskerville/bspwm/issues/52
+wmname LG3D
+
+# https://wiki.archlinux.org/index.php/GNOME/Keyring
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 sxhkd &
 compton -b
 feh --bg-fill ~/Pictures/wallpaper.jpg
