@@ -55,12 +55,13 @@ filetype plugin indent on    " required
 
 " Set encoding
 set encoding=utf-8
+set backspace=2  " osx fix
 
 " Airline Hacks
 set laststatus=2                              " without this the status line is not visible
 set ttimeoutlen=50                            " to prevent delay when leaving insert mode
 let g:airline_powerline_fonts=1               " using patched Inconsolata
-let g:airline_theme='gruvbox'            " favourite theme
+let g:airline_theme='powerlineish'            " favourite theme
 let g:airline#extensions#tabline#show_buffers=1
 let g:rehash256=1
 
